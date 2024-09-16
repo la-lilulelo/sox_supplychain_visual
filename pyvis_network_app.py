@@ -73,27 +73,27 @@ def create_network():
         
         metadata_dict[company]['color'] = color
 
-        net = Network(
-        notebook=True, 
-        cdn_resources='remote',
-        directed=True,
-        bgcolor='#222222',
-        font_color='white',
-        height='1000px',
-        width='100%',
-        select_menu=True,
-        )
+    net = Network(
+    notebook=True, 
+    cdn_resources='remote',
+    directed=True,
+    bgcolor='#222222',
+    font_color='white',
+    height='1000px',
+    width='100%',
+    select_menu=True,
+    )
 
-        nodes = list(set([*data.supplier, *data.company]))
-        titles = [node + ': \n inventory to sales growth: '+ str(metadata_dict[node]['inv_to_sls_gth']) + '\n forward sales growth ratio: ' + str(metadata_dict[node]['ttm_to_fwd_sls_gth']) for node in nodes]
-        values = [sales_map[node] for node in nodes]
-        colours = [metadata_dict[node]['color'] for node in nodes]
-        edges = [tuple(x) for x in data[['supplier','company','pct_cost']].values.tolist()]
-        net.add_nodes(nodes, value=values, title=titles, color=colours)
-        net.add_edges(edges)
-        net.repulsion()
+    nodes = list(set([*data.supplier, *data.company]))
+    titles = [node + ': \n inventory to sales growth: '+ str(metadata_dict[node]['inv_to_sls_gth']) + '\n forward sales growth ratio: ' + str(metadata_dict[node]['ttm_to_fwd_sls_gth']) for node in nodes]
+    values = [sales_map[node] for node in nodes]
+    colours = [metadata_dict[node]['color'] for node in nodes]
+    edges = [tuple(x) for x in data[['supplier','company','pct_cost']].values.tolist()]
+    net.add_nodes(nodes, value=values, title=titles, color=colours)
+    net.add_edges(edges)
+    net.repulsion()
 
-        return net
+    return net
     
 sox_supplychain = create_network()
 
