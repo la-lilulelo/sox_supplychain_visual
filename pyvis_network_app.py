@@ -2,6 +2,7 @@ import streamlit.components.v1 as components
 from pyvis.network import Network
 import streamlit as st
 import pandas as pd
+import os
 
 data = pd.read_excel(os.getcwd() + '/data/supplychain_bbg-v01.xlsx')
 metadata = pd.read_excel(os.getcwd() + '/data/metadata-v01.xlsx')
