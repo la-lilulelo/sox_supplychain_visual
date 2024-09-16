@@ -4,13 +4,12 @@ import streamlit as st
 import pandas as pd
 import os
 
-data = pd.read_excel(os.getcwd() + '/data/supplychain_bbg-v01.xlsx')
-metadata = pd.read_excel(os.getcwd() + '/data/metadata-v01.xlsx')
-
 st.title('Network Graph Visualisation of SOX Index Constituents')
 
-
 def create_network():
+    data = pd.read_excel(os.getcwd() + '/data/supplychain_bbg-v01.xlsx')
+    metadata = pd.read_excel(os.getcwd() + '/data/metadata-v01.xlsx')
+    
     data = data[['supplier', 'pct_cost', 'company', 'ttm_sales', 'sales_to_inv_grwth', 'ttm_to_fwd_sls_grwth']]
     data = data.dropna()
 
@@ -96,7 +95,7 @@ def create_network():
 
         return net
     
-sox_supplychain = create_network()
+sox_supplychain = create_network(data. ,me)
 
 try:
     path = '/tmp'
