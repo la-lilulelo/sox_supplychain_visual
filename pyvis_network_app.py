@@ -5,7 +5,7 @@ import pandas as pd
 import os
 
 st.title('Network Graph Visualisation of SOX Index Constituents')
-st.subheader('Node size corresponds to trailing twelve month revenue. Node colour corresponds to a quintile based scoring system derived from a composite of inventory to sales growth and forward to trailing sales growth ratios. Nodes that appear green indicate favourable inventory and sales trends, while those in read indicate the opposite.')
+st.text('Node size corresponds to trailing twelve month revenue. Node colour corresponds to a quintile based scoring system derived from a composite of inventory to sales growth and forward to trailing sales growth ratios. Nodes that appear green indicate favourable inventory and sales trends, while those in read indicate the opposite.')
 
 def create_network():
     data = pd.read_excel(os.getcwd() + '/data/supplychain_bbg-v01.xlsx')
