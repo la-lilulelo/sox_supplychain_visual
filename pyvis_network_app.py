@@ -1,11 +1,11 @@
 import streamlit.components.v1 as components
 from pyvis.network import Network
+from pathlib import Path
 import streamlit as st
 import pandas as pd
 
-data = pd.read_excel('data/supplychain_bbg-v01.xlsx')
-
-metadata = pd.read_excel('data/metadata-v01.xlsx')
+data = Path(__file__).parents[1] / pd.read_excel('.\data\supplychain_bbg-v01.xlsx')
+metadata = Path(__file__).parents[1] / pd.read_excel('.\data\metadata-v01.xlsx')
 
 
 st.title('Network Graph Visualisation of SOX Index Constituents')
