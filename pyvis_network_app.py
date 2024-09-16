@@ -82,7 +82,7 @@ def create_network():
     directed=True,
     bgcolor='#222222',
     font_color='white',
-    height='500px',
+    height='700px',
     width='100%',
     select_menu=True,
     )
