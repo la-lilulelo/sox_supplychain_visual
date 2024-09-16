@@ -95,7 +95,7 @@ def create_network():
 
         return net
     
-sox_supplychain = create_network(data. ,me)
+sox_supplychain = create_network()
 
 try:
     path = '/tmp'
