@@ -107,4 +107,4 @@ except:
     sox_supplychain.save_graph(f'{path}/pyvis_graph.html')
     HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
-components.html(HtmlFile.read(), height=435)
+components.html(HtmlFile.read(), height=1000)
