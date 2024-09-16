@@ -3,4 +3,3 @@ pyvis==0.3.2
 streamlit==1.38.0
 networkx==3.3
 openpyxl==3.1.5
-pathlib==1.0.1
