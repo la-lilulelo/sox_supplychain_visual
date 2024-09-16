@@ -79,7 +79,7 @@ def create_network():
     directed=True,
     bgcolor='#222222',
     font_color='white',
-    height='1000px',
+    height='500px',
     width='100%',
     select_menu=True,
     )
@@ -107,4 +107,4 @@ except:
     sox_supplychain.save_graph(f'{path}/pyvis_graph.html')
     HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
-components.html(HtmlFile.read(), height=1000)
+components.html(HtmlFile.read(), height=500)
