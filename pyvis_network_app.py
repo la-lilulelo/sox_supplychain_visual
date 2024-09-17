@@ -112,4 +112,4 @@ except:
     HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
 components.html(HtmlFile.read(), height=700)
-st.text('By James B (La-lilulelo)')
+st.text('By James B (la-lilulelo)')
